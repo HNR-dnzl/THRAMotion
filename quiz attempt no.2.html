@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <link rel="shortcut icon" type="x - icon" href="THRAMotion logo.png">
+  <title>THRAMotion</title>
+    <style>
+
+@font-face {
+  font-family: 'earworm';
+  src: url(earworm/Earworm\ DEMO.otf);
+}
+
+@font-face {
+  font-family: 'penumbra';
+  src: url(Penumbra/Penumbra\ Sans\ Std\ Bold.otf);
+}
+
+*{
+    margin: 10px;
+    padding: 0;
+}
+
+/*Banner*/
+.Top{
+    width: 85%;
+    margin: auto;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    width: 1250px;
+    height: 5px;
+    position: absolute;
+    top: -20px;
+    right: 0px;
+}
+
+/*Lesson and About us Positioning*/
+
+.Top ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+    position: relative;
+    top: 9px;
+    right: -50px;
+}
+
+/*Lesson and About us text style*/
+
+.Top ul li a{
+    text-decoration: none;
+    color: blue;
+    text-transform: uppercase;
+    font-family: "earworm";
+    font-size: 45px;
+}
+
+.lesson{
+    position: absolute;
+    right: -90px;
+    top: -30px;
+}
+
+/*dropdown link*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 50px 30px;
+    z-index: 1;
+    font-family: 'earworm';
+    font-size: 30px;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content a{
+    text-decoration: none;
+}
+
+/*about us animation*/
+
+li {
+    display:inline-block;
+    padding:1px;
+   }
+   
+   li:hover {
+     color: Blue;
+     border-bottom: 3px solid Blue;
+   }
+
+/*THRAMotion Logo*/
+.logo{
+    width: 280px;
+    position: absolute;
+    top: -80px;
+    right: 990px;
+}
+
+/*vertical line*/
+
+.vline1{
+    position: absolute;
+    width: 40px;
+    top: 15px;
+    right: 170px;
+}
+
+.vline2{
+    position: absolute;
+    width: 40px;
+    top: 15px;
+    right: 335px;
+}
+
+
+.whitebackground{
+  width: 500px;
+  height: 430px;
+  position: absolute;
+  top: 200px;
+  right: 660px;
+  border-radius: 50px;
+  padding: 15px;
+}
+
+.whitebganswers{
+  width: 500px;
+  height: 430px;
+  position: absolute;
+  top: 200px;
+  right: 140px;
+  border-radius: 50px;
+  padding: 15px;
+}
+
+.lesson1text{
+    font-family: "earworm";
+    position: absolute;
+    top: 90px;
+    right: 160px;
+    color: blue;
+    font-size: 30px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 30px;
+    letter-spacing: 3px;
+    width: 1000px;
+    text-align: center;
+}
+
+        .next{
+        background-color: blue;
+        color: white;
+        padding: 15px;
+        border-radius: 20px;
+        position: absolute;
+        top: 575px;
+        right: 180px;
+        border-color: blue;
+        font-family: 'penumbra';
+    }
+        .prev{
+        background-color: blue;
+        color: white;
+        padding: 15px;
+        border-radius: 20px;
+        position: absolute;
+        left: 130px;
+        top: 575px;
+        border-color: blue;
+        font-family: 'penumbra';
+    }
+
+    .buttons{
+      position: absolute;
+      right: 250px;
+      top: 240px;
+      font-family: 'penumbra';
+      color: white;
+    }
+
+    .questions{
+            font-family: Arial, Helvetica, sans-serif;
+            color: blue;
+            position: absolute;
+            right: 750px;
+            top: 380px;
+        }
+
+    .answer1{
+    background-color: blue;
+    border-color: blue;
+    color: white;
+    padding: 15px;
+    border-radius: 50px;
+    width: 280px;
+    }
+
+.answer2{
+    background-color: blue;
+    border-color: blue;
+    color: white;
+    padding: 15px;
+    border-radius: 50px;
+    width: 280px;
+}
+
+.answer3{
+    background-color: blue;
+    border-color: blue;
+    color: white;
+    padding: 15px;
+    border-radius: 50px;
+    width: 280px;
+}
+
+.answer4{
+    background-color: blue;
+    border-color: blue;
+    color: white;
+    padding: 15px;
+    border-radius: 50px;
+    width: 280px;
+}
+
+
+#results{
+  position: absolute;
+  right: 500px;
+  top: 230px;
+  background-color: white;
+  padding: 1px;
+  width: 400px;
+  height: 300px;
+  border-radius: 30px;
+}
+
+.results{
+  font-family: "earworm";
+  color: blue;
+  font-size: 40px;
+  position: absolute;
+  right: 120px;
+}
+
+.scoreresult{
+  font-family: "earworm";
+  color: blue;
+  font-size: 30px;
+  position: absolute;
+  right: 80px;
+  top: 80px;
+}
+
+.restart{
+  padding: 10px;
+  width: 250px;
+  border-radius: 50px;
+  position: absolute;
+  right: 60px;
+  top: 150px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  letter-spacing: 1px;
+  background-color: blue;
+  color: white;
+  border-color: blue;
+}
+
+  </style>
+
+</head>
+
+<body style="background-color: #d84484;">
+
+  <div class="Top">
+
+    <!--Banner-->
+        <a href="THRAMotion.html"><img src="THRAMotion logo.png" class="logo"></a>
+    <ul>
+        <div class="dropdown">
+            <li><a class="lesson" href="lessons.html">Lessons</a></li>
+
+            <div class="dropdown-content">
+                <a href="lesson1.html">Lesson 1</p>
+                <a href="lesson 2.html">Lesson 2</p>
+                <a href="lesson 3.html">Lesson 3</p>
+                <a href="lesson 4.html">Lesson 4</p>
+
+            </div>
+        </div>
+
+
+            <li><a href="about us.html">About Us</a></li>
+
+    </ul>
+
+        <!--vertical line-->
+        <img src="red vertical line.png" class="vline1">
+        <img src="red vertical line.png" class="vline2">
+
+</div>
+
+  
+
+
+
+  <div class="lesson1text">
+
+    <h1>
+        Lesson 1: What is Motion
+    </h1>
+
+</div>
+
+  <form id="quiz">
+    <img class="whitebganswers" src="whitebg.png">
+    <img class="whitebackground" src="whitebg.png">
+    <h2 class="questions" id="question">1. Which is the change in position of an object with respect to its surroundings in each interval of time?</h2>
+
+    <div class="buttons">
+
+      <div class=answer1>
+        <input type="radio" name="answer" value="Paris">
+        <label>Paris</label><br>
+        </div>
+        
+        <div class=answer2>
+        <input type="radio" name="answer" value="London">
+        <label>London</label><br>
+        </div>
+        
+        <div class=answer3>
+        <input type="radio" name="answer" value="Rome">
+        <label>Rome</label><br>
+        </div>
+        
+        <div class=answer4>
+        <input type="radio" name="answer" value="Madrid">
+        <label>Madrid</label><br>
+        </div>
+
+    </div>
+ 
+    <button class="prev" type="button" onclick="prevQuestion()">BACK</button>
+    <button class="next" type="button" onclick="nextQuestion()">NEXT</button>
+
+
+  </form>
+
+
+  <div id="results" style="display: none;">
+    <h2 class="results">You Scored</h2>
+    <p class="scoreresult" id="score">You scored 0 out of 3.</p>
+    <button class="restart" type="button" onclick="restartQuiz()">READY FOR NEXT QUIZ?<br>(Click to restart)</button>
+  </div>
+
+
+
+  <script>
+    var questions = [
+      { question: "1. Which is the change in position of an object with respect to its surroundings in each interval of time?", answer: "Rome" },
+      { question: "2. Which is when any part of an objects velocity changes?", answer: "Rome" },
+      { question: "3.	Which is the total measured length between two given points?", answer: "Rome" },
+      { question: "4.	Which is the measured mean distance covered between two specified points?", answer: "Rome" },
+      { question: "5.	Which is the change in speed from fast to slow??", answer: "Rome" },
+      { question: "6.	Which refers to how long an object takes to move from point A to point B?", answer: "Rome" },
+      { question: "7.	Which is the change in speed from slow to fast?", answer: "Rome" },
+      { question: "8.	Which measures distance over time or speed in each direction?", answer: "Rome" },
+      { question: "9.	Which formula is used to solve Average Speed?", answer: "Rome" },
+      { question: "10.Which formula is used to solve Instantaneous Velocity?", answer: "Rome" }
+    ];
+    var currentQuestion = 0;
+    var score = 0;
+    document.getElementById("question").innerHTML = questions[currentQuestion].question;
+
+    function prevQuestion() {
+      if (currentQuestion > 0) {
+        currentQuestion--;
+        document.getElementById("question").innerHTML = questions[currentQuestion].question;
+      }
+    }
+
+    function nextQuestion() {
+      var selectedAnswer = document.querySelector('input[name="answer"]:checked');
+      if (selectedAnswer) {
+        if (selectedAnswer.value == questions[currentQuestion].answer) {
+          score++;
+        }
+        if (currentQuestion < questions.length - 1) {
+          currentQuestion++;
+          document.getElementById("question").innerHTML = questions[currentQuestion].question;
+        } else {
+          document.getElementById("quiz").style.display = "none";
+          document.getElementById("results").style.display = "block";
+          document.getElementById("score").innerHTML = "You scored " + score + " out of " + questions.length + ".";
+        }
+      }
+    }
+
+    function restartQuiz() {
+      currentQuestion = 0;
+      score = 0;
+      document.getElementById("quiz").style.display = "block";
+      document.getElementById("results").style.display = "none";
+      document.getElementById("question").innerHTML = questions[currentQuestion].question;
+    }
+  </script>
+
+
+</body>
+</html>

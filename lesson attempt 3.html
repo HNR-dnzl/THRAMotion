@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz App</title>
+
+  <title>THRAMotion</title>
+
+  <link href="lesson1.css" rel="stylesheet">
+
+  <link rel="shortcut icon" type="x - icon" href="THRAMotion logo.png">
+  <style>
+
+@font-face {
+  font-family: 'earworm';
+  src: url(earworm/Earworm\ DEMO.otf);
+}
+
+@font-face {
+  font-family: 'penumbra';
+  src: url(Penumbra/Penumbra\ Sans\ Std\ Bold.otf);
+}
+
+*{
+    margin: 10px;
+    padding: 0;
+}
+
+
+/*Banner*/
+.Top{
+    width: 85%;
+    margin: auto;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    width: 1250px;
+    height: 5px;
+    position: absolute;
+    top: -20px;
+    right: 0px;
+}
+
+/*Lesson and About us Positioning*/
+
+.Top ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+    position: relative;
+    top: 9px;
+    right: -50px;
+}
+
+/*Lesson and About us text style*/
+
+.Top ul li a{
+    text-decoration: none;
+    color: blue;
+    text-transform: uppercase;
+    font-family: "earworm";
+    font-size: 45px;
+}
+
+.lesson{
+    position: absolute;
+    right: -90px;
+    top: -30px;
+}
+
+/*dropdown link*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 50px 30px;
+    z-index: 1;
+    font-family: 'earworm';
+    font-size: 30px;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content a{
+    text-decoration: none;
+}
+
+
+/*about us animation*/
+
+li {
+    display:inline-block;
+    padding:1px;
+   }
+   
+   li:hover {
+     color: Blue;
+     border-bottom: 3px solid Blue;
+   }
+
+/*THRAMotion Logo*/
+.logo{
+    width: 280px;
+    position: absolute;
+    top: -80px;
+    right: 990px;
+}
+
+/*vertical line*/
+
+.vline1{
+    position: absolute;
+    width: 40px;
+    top: 15px;
+    right: 170px;
+}
+
+.vline2{
+    position: absolute;
+    width: 40px;
+    top: 15px;
+    right: 335px;
+}
+
+
+.lesson1text{
+    font-family: "earworm";
+    position: absolute;
+    top: 90px;
+    right: 160px;
+    color: blue;
+    font-size: 30px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 30px;
+    letter-spacing: 3px;
+    width: 1000px;
+    text-align: center;
+}
+
+.whitebackground{
+  width: 500px;
+  height: 430px;
+  position: absolute;
+  top: 200px;
+  right: 660px;
+  border-radius: 50px;
+  padding: 15px;
+}
+
+.whitebganswers{
+  width: 500px;
+  height: 430px;
+  position: absolute;
+  top: 200px;
+  right: 140px;
+  border-radius: 50px;
+  padding: 15px;
+}
+
+#quiz{
+    position: absolute;
+    top: 100px;
+}
+
+.question{
+    font-family: 'penumbra';
+    color: blue;
+    position: absolute;
+    top: -100px;
+    right: -80px;
+    font-size: 25px;
+    padding: 1px;
+    width: 450px;
+}
+
+    .answer {
+      font-size: 18px;
+      margin-bottom: 10px;
+      cursor: default;
+      border: 1px solid lightgray;
+      border-radius: 15px;
+      padding: 10px;
+      background-color: blue;
+      color: white;
+      font-family: 'penumbra';
+      position: relative;
+      right: -530px;
+      bottom: 150px;
+      width: 300px;
+    }
+
+    .button {
+      font-size: 16px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+      background-color: blue;
+      color: white;
+      position: relative;
+      right: -750px;
+      top: -145px;
+      font-family: 'penumbra';
+    }
+    .button:hover {
+      background-color: rgb(5, 5, 95);
+    }
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      right: 200px;
+      top: 100px;
+    }
+    .question-number {
+      font-size: 14px;
+      margin-bottom: 20px;
+      font-family: 'penumbra';
+      font-weight: bold;
+      position: absolute;
+      right: -580px;
+      top: 200px;
+      color: gray;
+      font-weight: bold;
+    }
+
+    .button1 {
+      font-size: 16px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+      background-color: blue;
+      color: white;
+      position: absolute;
+      right: -580px;
+      top: -10px;
+      font-family: 'penumbra';
+    }
+
+    #quiz{
+      font-family: 'penumbra';
+      color: blue;
+      position: absolute;
+      right: 750px;
+      top: 400px;
+    }
+
+  input[type='radio'] {
+  width: 20px;
+  height: 20px;
+  /*transition: 0.3s;*/
+}
+
+input[type="radio"] {
+  appearance: none;
+  cursor: pointer;
+  display: inline-block;
+  padding-left: 34px;
+  position: relative;
+  vertical-align: middle;
+}
+
+input[type="radio"]:checked {
+  backface-visibility: hidden;
+  animation: checked 200ms ease 1;
+}
+
+input[type="radio"]:before {
+  background: none repeat scroll 0 0 rgba(255, 255, 255, 0);
+  border-radius: 100% 100% 100% 100%;
+  content: " ";
+  height: 7px;
+  left: 12px;
+  position: absolute;
+  top: 6px;
+  width: 7px;
+}
+
+input[type="radio"]:hover:before {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
+}
+
+input[type="radio"]:checked:before {
+  background: none repeat scroll 0 0 rgba(255, 255, 255, 1);
+}
+
+
+
+input[type="radio"]:after {
+  border: 3px solid #FFFFFF;
+  border-radius: 100% 100% 100% 100%;
+  content: " ";
+  height: 15px;
+  left: 5px;
+  position: absolute;
+  top: -1px;
+  width: 15px;
+}
+
+input[type="radio"]:checked:after {
+  border-color: rgba(255, 255, 255, 1);
+}
+
+  </style>
+</head>
+<body style="background-color: #d84484;">
+
+    <div class="Top">
+  
+      <!--Banner-->
+          <a href="THRAMotion.html"><img src="THRAMotion logo.png" class="logo"></a>
+      <ul>
+          <div class="dropdown">
+              <li><a class="lesson" href="lessons.html">Lessons</a></li>
+  
+              <div class="dropdown-content">
+                  <a href="lesson1.html">Lesson 1</p>
+                  <a href="lesson 2.html">Lesson 2</p>
+                  <a href="lesson 3.html">Lesson 3</p>
+                  <a href="lesson 4.html">Lesson 4</p>
+  
+              </div>
+          </div>
+  
+  
+              <li><a href="about us.html">About Us</a></li>
+  
+      </ul>
+  
+          <!--vertical line-->
+          <img src="red vertical line.png" class="vline1">
+          <img src="red vertical line.png" class="vline2">
+  
+  </div>
+  
+    
+  
+  
+  
+    <div class="lesson1text">
+  
+      <h1>
+          Lesson 1: What is Motion
+      </h1>
+  
+  </div>
+  <img class="whitebganswers" src="whitebg.png">
+  <img class="whitebackground" src="whitebg.png">
+  <div id="quiz"></div>
+
+  <script>
+    const quiz = [      {        prompt: "1.	Which is the change in position of an object with respect to its surroundings in each interval of time?",        answers: ["Time", "Distance", "Velocity","Motion"],
+        correctAnswer: "Motion"
+      },
+      {
+        prompt: "2.	Which is when any part of an objects velocity changes?",
+        answers: ["Distance", "Acceleration", "Velocity","Displacement"],
+        correctAnswer: "Acceleration"
+      },
+      {
+        prompt: "3.	Which is the total measured length between two given points?",
+        answers: ["Speed", "Displacement", "Time","Distance"],
+        correctAnswer: "Distance"
+      },
+      {
+        prompt: "4.	Which is the measured mean distance covered between two specified points?",
+        answers: ["Displacement", "Velocity", "Speed","Distance"],
+        correctAnswer: "Displacement"
+      },
+      {
+        prompt: "5.	Which is the change in speed from fast to slow?",
+        answers: ["Velocity", "Acceleration", "Deceleration","Displacement"],
+        correctAnswer: "Acceleration"
+      },
+      {
+        prompt: "6.	Which refers to how long an object takes to move from point A to point B?",
+        answers: ["Time", "Distance", "Velocity","Acceleration"],
+        correctAnswer: "Time"
+      },
+      {
+        prompt: "7.	Which is the change in speed from slow to fast?",
+        answers: ["Velocity", "Acceleration", "Deceleration","Displacement"],
+        correctAnswer: "Acceleration"
+      },
+      {
+        prompt: "8.	Which measures distance over time or speed in each direction?",
+        answers: ["Velocity", "Acceleration", "Deceleration","Displacement"],
+        correctAnswer: "Velocity"
+      },
+      {
+        prompt: "9.	Which formula is used to solve Average Speed?",
+        answers: ["d=  s ∙t", "v ̅_ave=  (x_2-x_1)/(t_f-t_o )", "t=   d/s","S_ave=  (∑▒S_n )/n"],
+        correctAnswer: "d=  s ∙t"
+      },
+      {
+        prompt: "10.	Which formula is used to solve Instantaneous Velocity?",
+        answers: ["v ̅=x/t", "d=  s ∙t ", "t=   d/s","s=d/t"],
+        correctAnswer: "v ̅=x/t"
+      }
+    ];
+
+    let score = 0;
+    let currentQuestion = 0;
+
+    function showQuestion() {
+      // Clear the quiz container
+      document.getElementById("quiz").innerHTML = "";
+
+      // Show the question prompt
+      let question = quiz[currentQuestion];
+      let questionElement = document.createElement("div");
+      questionElement.classList.add("question");
+      questionElement.innerText = question.prompt;
+      document.getElementById("quiz").appendChild(questionElement);
+
+      // Show the answers
+      let answersElement = document.createElement("div");
+      answersElement.classList.add("answers");
+      for (let i = 0; i < question.answers.length; i++) {
+        let answerElement = document.createElement("div");
+        answerElement.classList.add("answer");
+        let radioButton = document.createElement("input");
+        radioButton.type = "radio";
+        radioButton.name = "answer";
+        radioButton.value = question.answers[i];
+        radioButton.addEventListener("click", function() {
+          // Check if the answer is correct
+          if (question.answers[i] === question.correctAnswer) {
+            score++;
+          }
+          // Advance to the next question or show the final score
+          if (currentQuestion === quiz.length - 1) {
+            showScore();
+          } else {
+            currentQuestion++;
+            showQuestion();
+          }
+        });
+        answerElement.appendChild(radioButton);
+        let answerText = document.createTextNode(question.answers[i]);
+        answerElement.appendChild(answerText);
+        answersElement.appendChild(answerElement);
+      }
+      document.getElementById("quiz").appendChild(answersElement);
+
+      // Show the question number and total number of questions
+      let questionNumberElement = document.createElement("div");
+      questionNumberElement.classList.add("question-number");
+      questionNumberElement.innerText = `Question ${currentQuestion + 1} of ${quiz.length}`;
+      document.getElementById("quiz").appendChild(questionNumberElement);
+
+      // Show the "Prev" button
+      let prevButton = document.createElement("button");
+      prevButton.classList.add("button");
+      prevButton.innerText = "Back";
+      prevButton.addEventListener("click", function() {
+        // Go back to the previous question
+        if (currentQuestion > 0) {
+          currentQuestion--;
+          showQuestion();
+        }
+      });
+      document.getElementById("quiz").appendChild(prevButton);
+
+      // Show the "Next" button
+      let nextButton = document.createElement("button");
+      nextButton.classList.add("button");
+      nextButton.innerText = "skip";
+      nextButton.addEventListener("click", function() {
+        // Advance to the next question or show the final score
+        if (currentQuestion === quiz.length - 1) {
+          showScore();
+        } else {
+          currentQuestion++;
+          showQuestion();
+        }
+      });
+      document.getElementById("quiz").appendChild(nextButton);
+
+      // Disable the "Prev" button on the first question
+      if (currentQuestion === 0) {
+        prevButton.disabled = true;
+      }
+
+      // Disable the "Next" button on the last question
+      if (currentQuestion === quiz.length - 1) {
+        nextButton.disabled = true;
+      }
+    }
+
+    function showScore() {
+      // Clear the quiz container
+      document.getElementById("quiz").innerHTML = "";
+
+      // Show the final score
+      let scoreElement = document.createElement("div");
+      scoreElement.innerText = `You got ${score} out of ${quiz.length} questions correct!`;
+      document.getElementById("quiz").appendChild(scoreElement);
+
+      // Show the "Restart" button
+      let restartButton = document.createElement("button");
+      restartButton.classList.add("button1");
+      restartButton.innerText = "Ready for next Lesson? Click to Restart Quiz";
+      restartButton.addEventListener("click", function() {
+        // Reset the quiz to the first question
+        currentQuestion = 0;
+        score = 0;
+        showQuestion();
+      });
+      document.getElementById("quiz").appendChild(restartButton);
+    }
+
+    showQuestion();
+  </script>
+
+</body>
+</html>
+
+
